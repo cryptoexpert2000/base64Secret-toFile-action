@@ -28,5 +28,9 @@ runs:
       shell: bash
     - run: mkdir -p ${{ inputs.destination-path }}
       shell: bash
-    - run: mv ./${{ inputs.filename }} ${{ inputs.destination-path }}
+    - name: Move file if destination is different
+      run: |
+        if [[ "${{ inputs.destination-path }}" != "." ]]; then
+          mv ./${{ inputs.filename }} ${{ inputs.destination-path }}
+        fi
       shell: bash
