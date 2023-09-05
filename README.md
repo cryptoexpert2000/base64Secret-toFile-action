@@ -12,7 +12,7 @@ steps:
     run: ...
 
   - name: Decode secret
-    uses: cryptoexpert/base64Secret-toFile-action@v3
+    uses: cryptoexpert2000/base64Secret-toFile-action@v3
     with:
         secret: ${{ secrets.MY_AWESOME_SECRET_KEY }}
         filename: myFile.txt
