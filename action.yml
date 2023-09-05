@@ -1,4 +1,4 @@
-name: 'Base64 secret to file'
+name: 'Base64 secret to a local file'
 description: 'Reads a base64 encoded github secret into a file'
 branding:
   icon: 'settings'
